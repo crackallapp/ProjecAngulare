@@ -1,0 +1,81 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div id="enterperso" *ngIf="!isAuth">
+    connexion..!!
+    <label for="user" class="labeluser" > nom d'etulisateur: </label>
+    <input name="user" type="text" class="user" [(ngModel)]="user">
+    <label for="passe" class="labeluser">mot de passe:: </label> 
+    <input name="passe" type="password" class="user" [(ngModel)]="pass">
+    <input class="sbmt" type="submit" (click)='onAthu()'>
+  </div>
+  
+  <div class="title">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="father"> 
+    <div class="menue">
+      <div class="MenuTitle"><h3>Menu: </h3></div>
+      
+        <div (click)="onSelectPlat(pizza.name)" class="plt"
+                *ngFor="let pizza of PizzaPlat" >
+                <div class="dsply">   
+                  <img src={{pizza.imgurl}} class="img">
+                  <div class="divprg"> <ul><li><p class="prg">  {{pizza.name}} : {{pizza.price}} dh </p></li></ul>
+                <div class="ingd" id={{pizza.name}} > 
+                  {{pizza.ingredient}} <br> <button (click)="onslctCMD(pizza.name, pizza.price)" [disabled]="succesmsg" class="slctCMD" value="select">Ajouter</button>
+                </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="commande">
+      <div class="titlecmmd"><h3>Ticket:</h3></div>
+        <tr>
+          <td class="cmdlinetitle">
+            les Pizza choisis:
+          </td>
+          <td class="cmdlinetitle">
+           Prix:
+          </td>
+          <td class="cmdlinetitle">
+            Quantité:
+           </td>
+        </tr>
+        <ul>
+        <li *ngFor="let a of commandetecket"  > 
+            <tr>
+              <td class="cmdline" *ngIf="deletpizza[a[0]]" ><div class="cmdline">{{a[0]}}</div></td>
+              <td class="cmdlineprice" *ngIf="deletpizza[a[0]]"><div class="cmdlineprice">{{a[1]}}</div></td>
+              <div class="cntrldlt" (click)="ondelet(a[0])" *ngIf="deletpizza[a[0]]" >-</div>
+              <td class="cmdlineprice"><div class="cmdlineprice" *ngIf="deletpizza[a[0]]">{{a[2]}}</div></td>
+              <div class="cntrladd" (click)="onadd(a[0])" *ngIf="deletpizza[a[0]]" >+</div>
+          </tr>
+        </li>
+      </ul>
+      <div class="divbtnpaye">
+        <div><td class="total">Total: {{somme}} MAD</td></div>
+        <button  id="btnpay" class="btnpay" (click)="onClickpay()" >clicker ici pour payé</button>
+       </div>
+       <div>
+       <div *ngIf="wantpay" class="wantpay">
+        
+           <label for="price" class="=labelpay"> <p class="labelpay"> Entrer le montant ..</p></label>
+           <input  [(ngModel)]="price" class="inputprice" type="text" ><p class="labelpay">MAD</p>
+           <button   name="montpay" (click)="onPay()" class="paye" value="payé"> Payé</button>
+          
+      </div>  
+      <div *ngIf="errormsg" class="errormsg">
+        Montant incorecte..!!!
+      </div>
+      <div *ngIf="succesmsg" class="errormsg">
+        Paiement effectué avec succes <br> {{datecmd | date: 'dd/MM/yyyy, H:mm a' | uppercase}}
+      </div>  
+    </div>
+  
+  </div>
+  

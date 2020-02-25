@@ -1,0 +1,35 @@
+.usermess{
+    background-color: red;
+    width: 10%;
+    margin-bottom: auto;
+}
+.deconnected{
+    color:rgb(216, 14, 14);
+    background-color: rgb(255, 87, 87);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s; 
+    box-shadow: 1px 1px 12px #555; 
+    width: 8pc;
+}
+.deconnected:hover{
+    color:rgb(216, 14, 14);
+    background-color: rgb(250, 192, 192);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s; 
+    box-shadow: 1px 1px 12px rgb(104, 69, 69); 
+}
+.notification{
+    color:red;
+    width: 66%;
+    height: 100px;
+    position: relative;   
+    margin: auto;
+    border: solid;
+    border-radius: 15px;
+    box-shadow:1px 1px 12px slategray;
+}
+.titlenot {
+
+}

@@ -1,0 +1,208 @@
+.title{
+    color:mediumvioletred;
+    text-align: center;  
+
+}
+.father{
+    color: aqua;
+    background-color: white;
+    display: flex;
+    align-content: space-between;
+    margin: auto;
+    
+}
+.menue{
+    color: black;
+    background-color: black;
+    border: solid;
+    border-color: rgb(250, 157, 133);
+    width: 55%;
+    border-radius: 15px;
+    margin: 5px;
+}
+.commande{
+    display: inline;
+    color: rgb(253, 209, 127);
+    background-color:rgb(219, 146, 10);
+    border: solid;
+    border-radius: 15px;
+    margin: 5px;
+    height: fit-content;
+}
+.MenuTitle{
+    color: rgb(255, 76, 6);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    font-size: 30px;
+}
+.ingd{
+    display: block ;
+    font-size: medium;
+    color: red;
+    visibility: hidden;
+}
+.img{
+    width: 25%;
+    height: 50%;
+    vertical-align: middle;
+    background-image: none;
+}
+.divprg{
+    display: inline-block; 
+    cursor: pointer;
+    color: red;
+}
+
+.dsply{
+    display: ruby;
+}
+.prg{
+ color: red;
+ font-size: 20px;
+}
+.slctCMD{
+    color: red;
+    display: block;
+    background-color: rgb(255, 87, 87);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s;
+}
+.slctCMD:hover{
+    transition: 1000ms;
+    color: red;
+    background-color: rgb(255, 190, 190)
+}
+.titlecmmd{
+    color: red;
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: underline ;
+}
+.cmdline{
+    font-size: large;
+    text-decoration: underline ;
+    color: rgb(250, 157, 133);
+    display: flex;
+    width: 200px;
+
+}
+.cmdlineprice{
+    font-size: large;
+    text-decoration: underline ;
+    color: rgb(250, 157, 133);
+    width: 200px;
+}
+.cmdlinetitle{
+    font-style:oblique ;
+    font-size: ;
+    text-decoration: underline ;
+    color: red;
+    width: 200px;
+}
+.divbtnpaye{
+    text-align: center;
+}
+.btnpay{
+    color:black;
+
+    background-color: rgb(255, 87, 87);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s;
+}
+.btnpay:hover{
+    transition: 1000ms;
+    color: red;
+    background-color: rgb(255, 190, 190)
+}
+.total{
+    float: right;
+    border: tomato solid;
+    background-color: red;
+    width: 25%;
+    text-align: left;
+    border-radius: 15px
+}
+.wantpay{
+    margin-left: 120px;
+    margin-top: 14px;
+    color:black;
+    background-color: red;
+    width: max-content;
+    display: ruby;
+    border: tomato solid;
+    background-color: red;
+    border-radius: 15px;
+    float: right;
+    position: absolute;
+    
+}
+.inputprice{
+    width: 25%;
+
+}
+.paye{   
+    border: rgb(26, 12, 10) solid;
+    background-color: red;
+    width: max-content;
+    text-align: left;
+    border-radius: 15px
+}
+.paye:hover {   
+    color: red;
+    border: black(26, 12, 10) solid;
+    background-color: rgb(245, 157, 157);
+    border-radius: 5px;
+    transition: 1000ms;
+}
+.paye:active {   
+    font-style: oblique;
+    text-align: center;
+    color: black;
+    width: 60px;
+    height: 50px;
+    tab-size: 2px;
+    border-radius: 15px;
+    transition: 1000ms;
+}
+.errormsg{
+    border: red solid;
+    margin-left: 194px;
+    margin-top: 80px;
+    color:red;
+    width: 25%;
+    position: absolute;
+    width: max-content;
+    border-radius: 5px;
+}
+.cntrladd{
+    border: rgb(255, 3, 3) ;
+    font-size: larger;
+    font-style: oblique;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 180px;
+    width: 20px;
+    height: 20px;
+    margin-left: -159px;
+}
+.cntrldlt{
+    border: rgb(248, 2, 2) ;
+    font-size: larger;
+    font-style: oblique;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 180px;
+    width: 20px;
+    height: 20px;
+    margin-left: -47px;
+    margin-top: -24px;
+}
+
+
+

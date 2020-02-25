@@ -1,0 +1,270 @@
+
+@keyframes animcolor {
+    from, to { color: hsl(324, 70%, 45%); }
+    10%      { color: rgb(248, 159, 159); }
+    90%      { color: hsl(288, 60%, 40%); }
+}
+#enterperso {
+    color: red;
+    will-change: auto;
+    animation: animcolor 1000ms infinite;
+    box-shadow: 1px 1px 12px grey;
+    width: 15%;
+}
+.sbmt{
+    color:rgb(216, 14, 14);
+    background-color: rgb(255, 87, 87);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s; 
+    box-shadow: 1px 1px 12px #555; 
+}
+.sbmt:hover{
+    color:rgb(216, 14, 14);
+    background-color: rgb(250, 192, 192);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s; 
+    box-shadow: 1px 1px 12px rgb(104, 69, 69); 
+
+}
+.user{
+    display: block;
+    width: 90%;
+}
+.labeluser{
+    display: block;
+    color: red;
+}
+.title{
+    color:mediumvioletred;
+    text-align: center;  
+    box-shadow: 1px 1px 12px rgb(252, 3, 3);
+    width: 25%;
+    margin:  20px auto;
+    position: relative;
+    margin-top:-70px ;
+    display: block;
+    font-size: x-large;
+    padding: 5px;
+
+}
+.father{
+    color: aqua;
+    background-color: white;
+    display: flex;
+    align-content: space-between;
+    margin: auto;
+    
+}
+.menue{
+    color: black;
+    background-color:antiquewhite;
+    border: solid;
+    border-color: rgb(247, 197, 197);
+    width: 55%;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow:  2px 2px 22px red;
+}
+.commande{
+    display: inline;
+    color: antiquewhite;
+    background-color:rgb(252, 222, 234);
+    border: solid;
+    border-radius: 15px;
+    margin: 5px;
+    height: fit-content;
+    box-shadow: 1px 1px 12px red;
+    margin-top: 5pc;
+}
+.MenuTitle{
+    color: rgb(255, 76, 6);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    font-size: 30px;
+}
+.ingd{
+    display: block ;
+    font-size: medium;
+    color: red;
+    visibility: hidden;
+}
+.img{
+    width: 25%;
+    height: 50%;
+    vertical-align: middle;
+    background-image: none;
+}
+.divprg{
+    display: inline-block; 
+    cursor: pointer;
+    color: red;
+}
+
+.dsply{
+    display: ruby;
+}
+.prg{
+ color: red;
+ font-size: 20px;
+}
+.slctCMD{
+    color: red;
+    display: block;
+    background-color: rgb(255, 87, 87);
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s;
+    box-shadow: 1px 1px 12px #555;
+}
+.slctCMD:hover{
+    transition: 1000ms;
+    color: red;
+    background-color: rgb(255, 190, 190);
+    box-shadow: 1px 1px 12px rgb(204, 99, 99);
+}
+.titlecmmd{
+    color: red;
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: underline ;
+}
+.cmdline{
+    font-size: large;
+    text-decoration: underline ;
+    color: rgb(250, 157, 133);
+    display: flex;
+    width: 200px;
+
+}
+.cmdlineprice{
+    font-size: large;
+    text-decoration: underline ;
+    color: rgb(250, 157, 133);
+    width: 200px;
+}
+.cmdlinetitle{
+    font-style:inherit;
+    font-size: ;
+    text-decoration: underline ;
+    color: red;
+    width: 200px;
+}
+.divbtnpaye{
+    text-align: center;
+}
+.btnpay{
+    border:white;
+    background-color:antiquewhite;
+    border-radius: 15px;
+    transition-property:  background-color;
+    transition-duration: 1s;
+    visibility: hidden;
+    box-shadow: 1px 1px 12px #555;
+}
+.btnpay:hover{
+    transition: 1000ms;
+    color: red;
+    background-color: rgb(255, 190, 190);
+    box-shadow: 1px 1px 12px rgb(196, 115, 115);
+}
+.total{
+    float: right;
+    border: tomato solid;
+    background-color: rgb(255, 159, 159);
+    width: 25%;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 1px 1px 12px red;
+}
+.wantpay{
+    margin-left: 120px;
+    margin-top: 14px;
+    width: max-content;
+    display: ruby;
+    border: solid;
+    background-color:;
+    border-radius: 15px;
+    float: right;
+    position: absolute;
+    box-shadow: 1px 1px 12px red;
+    font-style: red;
+    
+}
+.inputprice{
+    width: 25%;
+
+}
+.paye{   
+    border:white;
+    background-color:antiquewhite;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 1px 1px 12px #555;
+    margin-left: 12px;
+    margin-right: -1px;
+}
+.paye:hover {   
+    color: red;
+    border: black(26, 12, 10) solid;
+    background-color: rgb(245, 157, 157);
+    border-radius: 5px;
+    transition: 1000ms;
+    box-shadow: 1px 1px 12px rgb(248, 145, 145);
+}
+.paye:active {   
+    font-style: oblique;
+    text-align: center;
+    color: black;
+    width: 60px;
+    height: 50px;
+    tab-size: 2px;
+    border-radius: 15px;
+    transition: 1000ms;
+}
+.errormsg{
+    border: red solid;
+    margin-left: 183px;
+    margin-top: 80px;
+    color:red;
+    width: 25%;
+    position: absolute;
+    width: max-content;
+    border-radius: 5px;
+    padding:3pc;
+    box-shadow: 1px 1px 12px gray;
+}
+.cntrladd{
+    border: rgb(255, 3, 3) ;
+    font-size: larger;
+    font-style: oblique;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 180px;
+    width: 20px;
+    height: 20px;
+    margin-left: -159px;
+}
+.cntrldlt{
+    border: rgb(248, 2, 2) ;
+    font-size: larger;
+    font-style: oblique;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 180px;
+    width: 20px;
+    height: 20px;
+    margin-left: -47px;
+    margin-top: -24px;
+}
+.labelpay{
+    color: rgb(240, 55, 55);
+}
+
+
+

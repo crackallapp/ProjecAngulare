@@ -1,0 +1,71 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="title">
+  <h1>{{title}}</h1>
+</div>
+<div class="father"> 
+  <div class="menue">
+    <div class="MenuTitle"><h3>Notre menu: </h3></div>
+    
+      <div (click)="onSelectPlat(pizza.name)" class="plt"
+              *ngFor="let pizza of PizzaPlat" >
+              <div class="dsply">   
+                <img src={{pizza.imgurl}} class="img">
+                <div class="divprg"> <ul><li><p class="prg">  {{pizza.name}} : {{pizza.price}} dh </p></li></ul>
+              <div class="ingd" id={{pizza.name}} > 
+                {{pizza.ingredient}} <br> <button (click)="onslctCMD(pizza.name, pizza.price)" [disabled]="succesmsg" class="slctCMD" value="select">ajouter a la commande</button>
+              </div></div>
+      </div>
+    </div>
+  </div>
+  <div class="commande">
+    <div class="titlecmmd"><h3>Ticket:</h3></div>
+    <ul>
+      <tr>
+        <td class="cmdlinetitle">
+          les Plats sélectioné:
+        </td>
+        <td class="cmdlinetitle">
+         Prix:
+        </td>
+        <td class="cmdlinetitle">
+          Quantité:
+         </td>
+      </tr>
+      <li *ngFor="let a of commande"  > 
+          <tr *ngIf="tabletest[a]">
+            <td class="cmdline" ><div class="cmdline">{{a}}</div></td>
+            <td class="cmdlineprice"><div class="cmdlineprice">{{selectprice[a]}}</div></td>
+            <div class="cntrldlt" (click)="ondelet(a)" >-</div>
+            <td class="cmdlineprice"><div class="cmdlineprice">{{tabQt[a]}}</div></td>
+            <div class="cntrladd" (click)="onadd(a)">+</div>
+        </tr>
+      </li>
+    </ul>
+    <div class="divbtnpaye">
+      <div><td class="total">Total: {{somme}} MAD</td></div>
+      <button *ngIf="iscommande" [disabled]="succesmsg" class="btnpay" (click)="onClickpay()" >clické ici pour payé</button>
+     </div>
+     <div>
+     <div *ngIf="wantpay" class="wantpay">
+      
+         <label for="price"> Entrer le montant ici..</label>
+         <input  [(ngModel)]="price" class="inputprice" type="text" ><p class="price">MAD</p>
+         <button   name="montpay" (click)="onPay()" class="paye" value="payé"> Payé</button>
+        
+    </div>  
+    <div *ngIf="errormsg" class="errormsg">
+      mercie d'entrer le montant correcrte
+    </div>
+    <div *ngIf="succesmsg" class="errormsg">
+      paiement effectué avec succes
+    </div>  
+  </div>
+
+</div>
