@@ -1,5 +1,5 @@
 <html> 
       <body>
-             <a bref="src\index.HTML"> is a test</a>
+             <a bref="src\index.html"> is a test</a>
       </body>
 </html>
